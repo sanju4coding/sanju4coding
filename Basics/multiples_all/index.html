@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>natural numbers</title>
+</head>
+
+<body>
+    <h1> sum of multiples</h1>
+    <input id="n" type="text" placeholder="enter a number" />
+    <button onclick="numberSum()"> submit </button>
+    <div>
+        <h2 id="result"> Result:</h2>
+    </div>
+    <div>
+        <h4 id="warning"> Warning:</h4>
+    </div>
+    <script>
+        function numberSum() {
+            const n = parseInt(document.getElementById('n').value);
+            if (isNaN(n)) {
+                document.getElementById("warning").textContent = "you left it empty";
+                return;
+            }
+            if (n <= 0) {
+                document.getElementById("warning").textContent = "enter a natural number";
+                return;
+            }
+
+            let sum = 0;
+            for (i = 0; i < n; i++) {
+                if (i % 3 === 0 || i % 5 === 0) {
+                    sum += i;
+                }
+
+
+            }
+
+            document.getElementById(`result`).textContent = `Sum:${sum}`;
+        }
+
+    </script>
+</body>
+
+</html>

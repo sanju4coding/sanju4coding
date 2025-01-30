@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airportluggage</title>
+</head>
+
+<body>
+    <h1> weighing machine </h1>
+    <input id="weightInput" type="text" placeholder="enter weight" />
+    <button onclick="checkWeight()"> submit </button>
+    <div id="result"> result: </div>
+    <script>
+        function checkWeight() {
+            const weight = document.getElementById('weightInput').value;
+            const result = document.getElementById('result');
+            // document.getElementById('result')="working";
+            if (!weight) {
+                result.textContent = "please enter weight";
+                result.style.color = "red";
+                return;
+
+            }
+            if (weight > 15) {
+                result.textContent = "weight exceeded";
+                result.style.color = "orange";
+        
+              
+
+            }
+            else if (weight==15){
+                result.textContent = "correct weight";
+                result.style.color = "blue";
+            }
+            else { 
+                result.textContent = "low weight";
+                result.style.color = "green";
+
+            }
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
