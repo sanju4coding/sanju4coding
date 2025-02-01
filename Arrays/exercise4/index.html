@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function f4</title>
+</head>
+
+<body>
+    <div>
+        <input id="inputA" type="number" placeholder="enter A">
+    </div>
+    <div>
+        <input id="inputB" type="number" placeholder="enter B">
+    </div>
+    <div>
+        <input id="inputL" type="text" placeholder="enter L">
+    </div>
+    <div>
+        <button style="background-color: blue ; color: azure;" onclick="handlef4()">
+            caluclate
+        </button>
+    </div>
+    <!-- <div>
+        <result id="result"> Result:
+
+        </result>
+    </div> -->
+    <script>
+        function f4(a, b, l) {
+            let sum = 0;
+            for (let nickname of l) {
+                if (nickname % a === 0 || nickname % b === 0) {
+                    sum = sum + nickname;
+
+                }
+            }
+            return sum;
+        }
+        
+        
+        function handlef4() {
+            const a = parseInt(document.getElementById("inputA").value);
+            const b = parseInt(document.getElementById("inputB").value);
+            const l = document.getElementById("inputL").value.split(",").map(Number);
+
+           let result= f4(a, b, l);
+
+        //  document.getElementById("result").textContent=`${result}`
+
+       alert("This is your result: " + result );
+
+        }
+
+    </script>
+</body>
+
+</html>

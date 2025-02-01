@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise f6</title>
+</head>
+
+<body>
+    <div>
+        <input id="inputA" type="text" placeholder="enter A">
+    </div>
+    <div>
+        <input id="inputL" type="text" placeholder="enter L">
+    </div>
+    <div>
+        <button onclick="sumOfMultiples()">clickme </button>
+    </div>
+
+    <script>
+        function f6(a,l) {
+            let sum = 0;
+            for (let nickname of l) {
+                for (let surname of a) {
+                    if (nickname % surname === 0) {
+                        sum = sum + nickname;
+                        break;
+                    }
+                }
+
+
+            }
+            return sum;
+
+
+
+        }
+        function sumOfMultiples() {
+            const a = document.getElementById("inputA").value.split(",").map(Number);
+            const l = document.getElementById("inputL").value.split(",").map(Number);
+            let result=  f6(a,l);
+
+            alert("This is your Result :" + result);
+
+        }
+
+
+    </script>
+</body>
