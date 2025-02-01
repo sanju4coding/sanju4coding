@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise f5</title>
+</head>
+
+<body>
+    <div>
+        <input id="inputA" type="text" placeholder="enter A">
+    </div>
+    <div>
+        <input id="inputL" type="text" placeholder="enter L">
+    </div>
+    <div>
+        <button onclick="factorsOfL()" >clickme </button>
+    </div>
+    <script>
+        function f5(a,l){
+            let sum =0;
+            for( let nickname of l){
+                if( nickname %a[0]===0 || nickname %a[1]===0){
+                    sum = nickname + sum
+                   
+                }
+
+            }
+            return sum;
+
+        }
+        function factorsOfL() {
+
+            const a = document.getElementById("inputA").value.split(",").map(Number);
+            const l = document.getElementById("inputL").value.split(",").map(Number);
+        
+
+        let result = f5(a,l);
+         
+        alert("This is your result:"+ result);
+       
+        }
+
+         
+
+
+    </script>
+
+</body>
+
+</html>
