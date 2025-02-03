@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    color: beige;
+    display: grid;
+    grid-template-columns:;
+}
+
+a {
+    text-decoration: none;
+    /* Removes underline */
+    color: inherit;
+    /* Keeps default text color */
+}
+
+img:hover {
+    transform: scale(1.2);
+    transition: transform 0.8s ease-in-out;
+
+}
+p { margin-left: 0;
+    margin-right: auto;
+
+}
